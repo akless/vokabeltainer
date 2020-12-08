@@ -66,21 +66,25 @@
 <body>
 <script>
 
+  // Vokabel eingeben => Vokabeltrainer Builder
+  // Vokabel lernen => Vokabeltrainer
+
+
   /**
    * vocabulary data
    * @type {Object}
    */
   const vokabeln = [
     {
-      de: 'Haus',
-      en: 'House',
-      total: 10,
-      correct: 6,
-      last_shown: '2020-11-17 12:00'
+      "front": "Haus",
+      "back": "House",
+      "total": 10,
+      "correct": 6,
+      "last_shown": "2020-11-17 12:00"
     },
     {
-      de: 'Büro',
-      en: 'Office',
+      front: 'Büro',
+      back: 'Office',
       total: 5,
       correct: 2,
       last_shown: '2020-11-17 15:00'
@@ -114,10 +118,10 @@
         <div class="card flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <div>${vokabeln[i].de}</div>
+              <div>${vokabeln[i].front}</div>
             </div>
             <div class="flip-card-back">
-              <div>${vokabeln[i].en}</div>
+              <div>${vokabeln[i].back}</div>
             </div>
           </div>
         </div>
@@ -139,7 +143,7 @@
 
       // update vocabulary data
       vokabeln[i].total++;
-      const correct = value === vokabeln[i].en;
+      const correct = value === vokabeln[i].back;
       if ( correct )
         vokabeln[i].correct++;
 

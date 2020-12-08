@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vokabeltrainer Builder</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</head>
+<body>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Vokabel hinzufügen</button>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Neue Vokabel</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="p-3">
+            <div class="mb-3">
+              <label for="word-input" class="form-label">Worteingabe:</label>
+              <input type="text" class="form-control" id="word-input" aria-describedby="word-help">
+              <div id="word-help" class="form-text">Dieses Wort wird auf der Vorderseite der Karte angezeigt.</div>
+            </div>
+            <div class="mb-3">
+              <label for="translation-input" class="form-label">Übersetzung:</label>
+              <input type="text" class="form-control" id="translation-input" aria-describedby="translation-help">
+              <div id="translation-help" class="form-text">Die Übersetzung steht auf der Rückseite der Karte.</div>
+            </div>
+            <button type="submit" class="btn btn-primary">Vokabel speichern</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
