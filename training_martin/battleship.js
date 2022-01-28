@@ -225,9 +225,10 @@ function init() {
 
 
 
-/*
+
 model.fire("53");
 
+/*
 model.fire("06");
 
 
