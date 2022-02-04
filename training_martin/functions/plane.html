@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>Funktionen erster Klasse</title>
+    <script>
+
+        var passengers = [
+            { name: "Jane Doloop", paid: true, ticket: "Economy" },
+            { name: "Dr. Evel", paid: true, ticket: "Erste Klasse" },
+            { name: "Sue Property", paid: false, ticket: "Erste Klasse" },
+            { name: "John Funcall", paid: true, ticket: "Business" }
+        ];
+
+        function processPassengers(passengers, test) {
+            for (var i = 0; i < passengers.length; i++) {
+                if (test(passengers[i])) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function checkNoFlyList(passenger) {
+            return (passenger.name === "Dr. Evel");
+        }
+
+        function checkNotPaid(passenger) {
+            return (!passenger.paid);
+        }
+
+        function printPassenger(passenger) {
+            var message = passenger.name;
+            if (passenger.paid === true) {
+                message = message + " hat bezahlt";
+            } else {
+                message = message + " hat nicht bezahlt";
+            }
+            console.log(message);
+            return false;
+        }
+
+        //
+        // Flugzeug kann nur starten, wenn sich kein Passagier auf der No-Fly-Liste befindet
+        //
+        var allCanFly = processPassengers(passengers, checkNoFlyList);
+        if (!allCanFly) {
+            console.log("Das Flugzeug kann nicht starten. Es gibt einen Passagier auf der No-Fly-Liste.");
+        }
+
+        //
+        // Flugzeug kann nur starten, wenn alle Passagiere bezahlt haben
+        //
+        var allPaid = processPassengers(passengers, checkNotPaid);
+        if (!allPaid) {
+            console.log("Das Flugzeug kann nicht starten: Jemand hat nicht bezahlt.");
+        }
+
+        //
+        // Das Ergebnis ist hier nicht wichtig. Wir benutzen processPassengers
+        // einfach, um die Passagierliste auszugeben.
+        //
+        processPassengers(passengers, printPassenger);
+
+        function createDrinkOrder(passenger) {
+            var orderFunction;
+            if (passenger.ticket === "Erste Klasse") {
+                orderFunction = function() {
+                    alert("Möchten Sie einen Cocktail oder Wein?");
+                };
+            } else if (passenger.ticket === "Business") {
+                orderFunction = function() {
+                    alert("Wollen Sie lieber Wein, Cola oder Wasser?");
+                };
+            } else {
+                orderFunction = function() {
+                    alert("Sie haben die Wahl zwischen Cola und Wasser.");
+                };
+            }
+            return orderFunction;
+        }
+
+
+        function createDinnerOrder(passenger) {
+            var orderFunction;
+            if (passenger.ticket === "Erste Klasse") {
+                orderFunction = function() {
+                    alert("Bevorzugen Sie Hühnchen oder Pasta?");
+                };
+            } else if (passenger.ticket === "Business") {
+                orderFunction = function() {
+                    alert("Möchten Sie lieber einen Snack oder eine Käseplatte?");
+                };
+            } else {
+                orderFunction = function() {
+                    alert("Bratwurst oder Bretzel?");
+                };
+            }
+            return orderFunction;
+        }
+
+        function pickupTrash() {
+            alert("Kann ich bitte Ihren Abfall haben?");
+        }
+
+        function serveCustomer(passenger) {
+            var getDrinkOrderFunction = createDrinkOrder(passenger);
+            var getDinnerOrderFunction = createDinnerOrder(passenger);
+
+            getDrinkOrderFunction();
+
+            // Essensbestellung aufnehmen
+            getDinnerOrderFunction();
+
+            getDrinkOrderFunction();
+            getDrinkOrderFunction();
+
+            // Film zeigen
+
+            getDrinkOrderFunction();
+
+            // Abfall einsammeln
+            pickupTrash();
+        }
+
+        function servePassengers(passengers) {
+            for (var i = 0; i < passengers.length; i++) {
+                serveCustomer(passengers[i]);
+            }
+        }
+
+        servePassengers(passengers);
+
+    </script>
+</head>
+<body>
+</body>
+</html>
+

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>Eine Funktion aus einer Funktion zurückgeben</title>
+    <script>
+
+        function addN(n) {
+            var adder = function(x) {
+                return n + x;
+            };
+            return adder;
+        }
+
+        var add2 = addN(2);
+        console.log(add2(10));
+        console.log(add2(100));
+
+        var add100 = addN(100);
+        console.log(add100(1));
+        console.log(add100(50));
+
+        var add500 = addN(500);
+        console.log(add500(2));
+        console.log(add500(55));
+
+        console.log("Martin's tests: =================")
+        console.log(addN(99));
+        console.log(add2);
+
+    </script>
+</head>
+<body> </body>
+</html>
+

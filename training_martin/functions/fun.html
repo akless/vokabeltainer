@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>Spass</title>
+    <script>
+
+        function fun(echo) {
+            console.log(echo);
+        };
+
+        fun("Hallo");
+
+        function boo(aFunction) {
+            aFunction("buh");
+        }
+
+        boo(fun);
+
+        console.log(fun);
+
+        fun(boo);
+
+        var moreFun = fun;
+
+        moreFun("Schon wieder hallo");
+
+        function echoMaker() {
+            return fun;
+        }
+
+        var bigFun = echoMaker();
+        bigFun("Gibt es hier ein Echo?");
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>
+
