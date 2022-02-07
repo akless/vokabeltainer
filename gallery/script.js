@@ -36,21 +36,46 @@ const div = document.createElement( 'div' );
 div.innerHTML = `
   <h2>${ app_state_data[0].title }</h2>
   <img src="${app_state_data[0].item}">
-  <p></p>
+  <p>Bla</p>
 `;
 document.body.appendChild( div );
 
 const str1 = "Hallo Welt!";
 const str2 = 'Hallo Welt!';
 const str3 = `Hallo Welt!`;
- */
+*/
 
 app_state_data.forEach( function ( obj, i, arr ) {
-  console.log( obj, i, arr );
+  // console.log( obj, i, arr );
+  // console.log( obj );
+  const div = document.createElement( 'div');
+  div.innerHTML = `
+      <h2>${ obj.title }</h2>
+      <img src="${ obj.item }" >
+      <p>${ obj.rating }</p>
+`;
+  document.body.appendChild( div );
 } );
 
+
+/*
 const arr = [1,2,3];
 arr.forEach( function ( num, i, arr ) {
   console.log( num, i, arr );
 } );
 
+// ===================================================================
+let text = "";
+const fruits = ["apple", "orange", "cherry"];
+fruits.forEach(myFunction);
+
+document.getElementById("demo").innerHTML = text;
+
+function myFunction(item, index) {
+  text += index + ": " + item + "<br>";
+}
+// ===================================================================
+
+
+
+ */

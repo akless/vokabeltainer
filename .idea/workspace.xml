@@ -20,18 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c6de406-2a1c-490e-a0cd-8c2d40f6fb22" name="Default Changelist" comment="New training from Martin: Schiffe-Versenken...">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vokabeltainer.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/training_martin/functions/addN.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/training_martin/functions/cola.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/training_martin/functions/fun.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/training_martin/functions/plane.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/training_martin/functions/sort.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/training_martin/handler_training.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/training_martin/readme.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallery/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/gallery/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallery/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/gallery/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +84,7 @@
       <workItem from="1642683465462" duration="7510000" />
       <workItem from="1643375924154" duration="2819000" />
       <workItem from="1643617158183" duration="3573000" />
+      <workItem from="1644221224770" duration="3740000" />
     </task>
     <task id="LOCAL-00001" summary="New training from Martin: Schiffe-Versenken...">
       <created>1642768525805</created>
@@ -149,5 +141,9 @@
       <screen x="-381" y="-1415" width="2560" height="1415" />
     </state>
     <state x="499" y="-971" key="Vcs.Push.Dialog.v2/-381.-1415.2560.1415/0.25.1792.1040@-381.-1415.2560.1415" timestamp="1643375698082" />
+    <state x="646" y="399" key="git4idea.ui.GitStashDialog" timestamp="1643988801064">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state x="646" y="399" key="git4idea.ui.GitStashDialog/-381.-1415.2560.1354/0.25.1792.1095@0.25.1792.1095" timestamp="1643988801064" />
   </component>
 </project>
