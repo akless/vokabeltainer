@@ -90,6 +90,23 @@ app_state_data.forEach( function ( obj, i, arr ) {
 
 
 /*
+Next step:
+- Rating: With the mouse, We can rate...
+Es gibt einen Wert (durchschnitt der Ratings)
+Ein zusätzliches Rating...
+Klick event
+ */
+
+
+
+
+
+
+
+
+
+
+/*
 const arr = [1,2,3];
 arr.forEach( function ( num, i, arr ) {
   console.log( num, i, arr );
