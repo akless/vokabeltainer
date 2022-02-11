@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>Anonyme Funktionen: Kekse backen</title>
+    <script>
+
+        window.onload = function() {
+            var button = document.getElementById("backen");
+            button.onclick = function() {
+                console.log("Zeit, die Kekse zu backen.");
+                cookies.bake(2500);
+            };
+        };
+
+        var cookies = {
+            instructions: "Ofen auf 175  Grad vorheizen...",
+            bake: function(time) {
+                console.log("Backe Kekse.");
+                setTimeout(done, time);
+            }
+        };
+
+        function done() {
+            alert("Kekse sind fertig. Bitte herausnehmen und abkühlen lassen.");
+            console.log("Kekse kühlen ab.");
+            var cool = function() {
+                alert("Kekse sind abgekühlt. Zeit zum Essen!");
+            };
+            setTimeout(cool, 1000);
+        };
+
+    </script>
+</head>
+<body>
+<form>
+    <input type="button" id="backen" value="Kekse backen!">
+</form>
+</body>
+</html>
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vergleich</title>
+    <script>
+        String.prototype.cliche = function () {
+            var cliche = ["tragen Lederhosen", "lange Haare", "trinken Cola"];
+
+            for (var i = 0; i < cliche.length; i++) {
+                var index = this.indexOf(cliche[i]);
+                if (index >= 0) {
+                    return true
+                }
+            }
+            return false;
+        }
+
+        var sentences = ["alle Bayern tragen Lederhosen.",
+            "Alle Programmierer haben lange Haare und trinken Cola.",
+            "Musiker sind die besseren Liebhaber."];
+
+        for (var i = 0; i < sentences.length; i++) {
+            var phrase = sentences[i];
+            if (phrase.cliche()) {
+                console.log("KLISCHEE-ALARM. " + phrase);
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

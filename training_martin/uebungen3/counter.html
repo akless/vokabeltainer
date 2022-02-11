@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Counter</title>
+    <script>
+        function  makeCounter() {
+            var count = 0;
+
+            function counter() {
+                count = count + 1;
+                return count;
+            }
+            return counter;
+        }
+        var doCount = makeCounter();
+        console.log(doCount());
+        console.log(doCount());
+        console.log(doCount());
+        console.log(doCount());
+        console.log(doCount());
+        console.log("------------------------------------------------------------------> 2. counter")
+
+        var mlCount = makeCounter();
+        console.log(mlCount());
+        console.log(mlCount());
+        console.log(mlCount());
+
+        console.log("------------------------------------------------------------------> mit innerer Funktion:")
+
+        function makeCounter2() {
+            var count2 = 0;
+            return {
+                increment: function () {
+                    count2++;
+                    return count2;
+                }
+            };
+        }
+        var counter2 = makeCounter2();
+        console.log(counter2.increment());
+        console.log(counter2.increment());
+        console.log(counter2.increment());
+        console.log(counter2.increment());
+
+    </script>
+
+</head>
+<body>
+
+</body>
+
+
+
+</html>

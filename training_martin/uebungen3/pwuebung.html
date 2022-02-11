@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Passwort-Übung</title>
+    <script>
+        function makePassword(password) {
+            return function guess(passwordGuess) {
+                return (passwordGuess === password);
+            };
+        }
+        var tryGuess = makePassword("geheim");
+        console.log("Rate 'keins': " + tryGuess("keins"));
+        console.log("Rate 'geheim': " + tryGuess("geheim"));
+        tryGuess("geheim");
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

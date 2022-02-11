@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dogs and Cats - Constructor</title>
+    <script>
+        function dogCatcher(obj) {
+            if (obj instanceof Dog) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function Cat(name, breed, weight) {
+            this.name = name;
+            this.breed = breed;
+            this.weight = weight;
+        }
+        var meow = new Cat("Stevens", "Siam", 5);
+        var whiskers = new Cat("Anton", "Mischling", 6);
+
+        var fido = {name: "Fido", breed: "Mischling", weight: 17};
+
+        function Dog(name, breed, weight) {
+            this.name = name;
+            this.breed = breed;
+            this.weight = weight;
+            this.bark = function() {
+                if (this.weight > 12.5) {
+                    alert(this.name + " macht Wuff!");
+                } else {
+                    alert(this.name + " macht Yip!");
+                }
+            };
+        }
+        var fluffy = new Dog("Fluffy", "pudel", 15);
+        var spot = new Dog("Spot", "Chihuahua", 5);
+        var elmar = new Dog("Elmar", "Schäferhund", 17);
+        var dogs = [meow, whiskers, fido, fluffy, spot, elmar];
+
+        for (var i = 0; i < dogs.length; i++) {
+            if (dogCatcher(dogs[i])) {
+                console.log(dogs[i].name + " ist ein Hund!");
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

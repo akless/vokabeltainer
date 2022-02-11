@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prototyp</title>
+    <script>
+        function Dog(name, breed, weight) {
+            this.name = name;
+            this.breed = breed;
+            this.weight = weight;
+        }
+
+        Dog.prototype.species = "Hund";
+
+        Dog.prototype.bark = function () {
+            if (this.weight > 12.5) {
+                console.log(this.name + " macht Wuff!");
+            } else {
+                console.log(this.name + " macht Yip!");
+            }
+        };
+
+        Dog.prototype.run = function () {
+            console.log("Lauf!");
+        }
+
+        Dog.prototype.wag = function () {
+            console.log("Wedle!");
+        }
+
+        Dog.prototype.sitting = false;
+        Dog.prototype.sit = function () {
+            if (this.sitting) {
+                console.log(this.name + " sitzt bereits.");
+            } else {
+                this.sitting = true;
+                console.log(this.name + " hat sich gerade gesetzt");
+            }
+        }
+
+        var fido = new Dog("Fido", "Mischling", 17.5);
+        var fluffy = new Dog("Fluffy", "Pudel", 12);
+        var spot = new Dog("Spot", "Chihuahua", 5);
+        var barnaby = new Dog("Barnaby", "basset", 27.5);
+
+        spot.bark = function () {
+            console.log(this.name + " macht WUFF, WUFF!");
+        }
+
+        fido.bark();
+        fido.run();
+        fido.wag();
+
+        fluffy.bark();
+        fluffy.run();
+        fluffy.wag();
+
+        spot.bark();
+        spot.run();
+        spot.wag();
+
+        barnaby.sit();
+        barnaby.sit();
+        spot.sit();
+        spot.sit();
+
+        console.log(spot.hasOwnProperty("species")); // --> false
+        console.log(fido.hasOwnProperty("species")); // --> false
+
+        console.log(spot.hasOwnProperty("sitting")); // --> true
+        spot.sitting = true;
+        console.log(spot.hasOwnProperty("sitting")); // --> true
+
+        console.log(fido.hasOwnProperty("sitting")); // --> false
+
+
+
+        function ShowDog(name, breed, weight, handler) {
+            Dog.call(this, name, breed, weight);
+            this.handler = handler;
+        }
+
+        ShowDog.prototype = new Dog();
+        ShowDog.prototype.constructor = ShowDog;
+
+        ShowDog.prototype.league = "Webville";
+
+        ShowDog.prototype.stack = function () {
+            console.log("Aufstellung (stack)");
+        }
+
+        ShowDog.prototype.bait = function () {
+            console.log("Ködern (bait)");
+        }
+
+        ShowDog.prototype.gait = function (kind) {
+            console.log(kind + "e");
+        }
+
+        ShowDog.prototype.groom = function () {
+            console.log("Hundefrisör (groom)");
+        }
+
+        var scotty = new ShowDog("Scotty", "Scottish Terrier", 7.5, "Cookie");
+        var beatrice = new ShowDog("Beatrice", "Spitz", 2.5, "Martin");
+
+        scotty.stack();
+        scotty.bark();
+        console.log(scotty.league);
+        console.log(scotty.species);
+        scotty.gait("Geh");
+        fido.bark();
+        fluffy.bark();
+        spot.bark();
+        scotty.bark();
+        beatrice.bark();
+        scotty.gait("Lauf");
+        beatrice.groom();
+
+
+
+        if (fido instanceof Dog) {
+            console.log("Fido ist ein Hund (Dog)");
+        }
+
+        if (fido instanceof ShowDog) {
+            console.log("Fido ist ein Ausstellungshund (ShowDog)");
+        }
+
+        if (scotty instanceof Dog) {
+            console.log("Scotty ist ein Hund (Dog)");
+        }
+
+        if (scotty instanceof ShowDog) {
+            console.log("Scotty ist ein Ausstellungshund (ShowDog)");
+        }
+        console.log("Konstruktor für Fido ist " + fido.constructor);
+        console.log("Konstruktor für Scotty ist " + scotty.constructor);
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

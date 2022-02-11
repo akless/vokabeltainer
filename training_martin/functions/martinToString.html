@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>toString</title>
+    <script>
+        function Robot(name, year, owner) {
+            this.name = name;
+            this.year = year;
+            this.owner = owner;
+        }
+        var toy = new Robot("Spielzeug-Flo", 2013, "Avary");
+
+        console.log(toy.toString());
+        console.log("================")
+
+        Robot.prototype.toString = function () {
+            return this.name + " Roboter gehört " + this.owner + ".";
+        }
+
+        console.log("================")
+        console.log(toy.toString());
+
+        console.log("================")
+        console.log("Roboter ist ein: " + toy);
+        console.log("================")
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
