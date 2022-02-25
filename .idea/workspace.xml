@@ -19,17 +19,21 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c6de406-2a1c-490e-a0cd-8c2d40f6fb22" name="Default Changelist" comment="Loop is done: YEA!!!">
-      <change afterPath="$PROJECT_DIR$/training_martin/functions/dogs.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/training_martin/functions/dogsandcats.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/training_martin/functions/martinToString.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/training_martin/functions/saetze.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/training_martin/uebungen3/counter.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/training_martin/uebungen3/eventhandler.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/training_martin/uebungen3/kekse.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/training_martin/uebungen3/keksebuch.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/training_martin/uebungen3/pwuebung.html" afterDir="false" />
+    <list default="true" id="2c6de406-2a1c-490e-a0cd-8c2d40f6fb22" name="Default Changelist" comment="Some new files...">
+      <change afterPath="$PROJECT_DIR$/training_martin/uebungen3/gameLevel.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/training_martin/uebungen3/rekursion.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/training_martin/uebungen3/roboter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/training_martin/uebungen4/Wiedergabeliste.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/training_martin/uebungen4/date.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/training_martin/uebungen4/martinuebungsjs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/training_martin/uebungen4/meinOrt.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/training_martin/uebungen4/meinOrt.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/training_martin/uebungen4/meinOrt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/training_martin/uebungen4/wiedergabeliste.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/training_martin/uebungen4/wiedergabeliste.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/training_martin/uebungen4/wiedergabeliste_speichern.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallery/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/gallery/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +43,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -59,6 +64,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="CodeWithMe" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -93,6 +99,9 @@
       <workItem from="1643617158183" duration="3573000" />
       <workItem from="1644221224770" duration="11386000" />
       <workItem from="1644487132395" duration="8278000" />
+      <workItem from="1644834051788" duration="791000" />
+      <workItem from="1645002329364" duration="9815000" />
+      <workItem from="1645518911295" duration="7098000" />
     </task>
     <task id="LOCAL-00001" summary="New training from Martin: Schiffe-Versenken...">
       <created>1642768525805</created>

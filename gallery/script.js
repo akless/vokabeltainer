@@ -76,17 +76,54 @@ app_state_data.forEach( function ( obj, i, arr ) {
       <path d="M5.354 5.119 7.538.792A.516.516 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.537.537 0 0 1 16 6.32a.548.548 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.52.52 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.58.58 0 0 1 .085-.302.513.513 0 0 1 .37-.245l4.898-.696zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.565.565 0 0 1 .162-.505l2.907-2.77-4.052-.576a.525.525 0 0 1-.393-.288L8.001 2.223 8 2.226v9.8z"/>
     </svg>  
   `;
-  for ( let i = 1; i <= 5; i++ ) {
-    if ( i <= obj.rating ) {
-      p.innerHTML += star_filled;
-    } else if ( i >= obj.rating + 1 ){
-      p.innerHTML += star_empty;
-    } else {
+
+  // N 1,2,3,4...
+  // Z 0,N
+  // N ... -3, ... 0, 1, 2...
+  // R Z/N
+  // Reellen Zahlen: R*Pi
+  // Komplexe Zahlen (1+i)
+
+  // Wie bekomme ich aus einer Reelen Zahl eine natürliche Zahl --> Math: ceil (aufrunden, floor (abrunden)
+
+  // Math.floor(obj.rating);  3,5 --> 3
+
+  // iteriere bis zum Vorkomma-Wert (e.g. 3)
+  let quantizedRating = Math.floor(obj.rating);
+  for ( let i = 0; i < quantizedRating; i++) {
+    p.innerHTML += star_filled;
+  }
+  if (quantizedRating != obj.rating) {      // 3
+    p.innerHTML += star_half;
+  }
+  for ( let i = Math.ceil(obj.rating); i < 5 ; i++) {
+    p.innerHTML += star_empty;
+  }
+
+
+    // Clientseitig CSS nth (unsorted List) -->
+
+
+  /*
+  for ( let i = 1; i <= 5; i++ ) {      // x5
+    if ( i <= obj.rating ) {            // 3 --> Vergleich, ...
+      p.innerHTML += star_filled;       // ---> muss eh gemacht werden
+    } else if ( i >= obj.rating + 1 ){  // 3
+      p.innerHTML += star_empty;        // ---
+    } else {                            // 1  == 35!
       p.innerHTML += star_half;
     }
   }
+  */
   document.body.appendChild( div );
 } );
+
+// Kosten: Vergleich kostet 1
+// Dereferenzierung : 1
+// Verzweigung: 1
+
+// 5xa,b,c
+// 1xa, 1xb, 3xc
 
 
 /*

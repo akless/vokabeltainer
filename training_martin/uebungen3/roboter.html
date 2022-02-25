@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Robot</title>
+    <script>
+        function Robot(name, year, owner) {
+            this.name = name;
+            this.year = year;
+            this.owner = owner;
+        }
+
+        Robot.prototype.maker = "ObjectsRUs";
+        Robot.prototype.speak = function () {
+            alert("Warnung, Warnung !!!");
+        }
+        Robot.prototype.makeCoffee = function () {
+            alert("Mache Kaffee");
+        }
+        Robot.prototype.blinkLights = function () {
+            alert("Blink blink!");
+        }
+        var robby = new Robot("Robby", 1956, "Dr. Morbius");
+        var rosie = new Robot("Rosie", 1962, "George Jetson");
+        robby.onOffSwitch = true;
+        robby.makeCoffee = function () {
+            alert("Hole Kaffee von Starbucks.");
+        }
+        rosie.cleanHouse = function () {
+            alert("Hausputz! Bald blitzt und blinkt alles wieder...");
+        }
+        console.log(robby.name + " wurde hergestellt von " + robby.maker + " in " + robby.year + " und gehört " + robby.owner);
+        robby.makeCoffee();
+        robby.blinkLights();
+        console.log(rosie.name + " wurde hergestellt von " + rosie.maker + " in " + rosie.year + " und gehört " + rosie.owner);
+        rosie.cleanHouse();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

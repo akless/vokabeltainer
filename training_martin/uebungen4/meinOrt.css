@@ -1,0 +1,20 @@
+/*
+ * meinOrt.css
+ *
+*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px;
+}
+div#standort, div#entfernung {
+    padding: 5px;
+}
+
+div#karte {
+    margin: 5px;
+    width: 400px;
+    height: 400px;
+    border: 1px solid black;
+}
+
