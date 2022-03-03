@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Json</title>
+    <script>
+
+        function Film (titel, genre, bewertung, vorstellungen) {
+            this.titel = titel;
+            this.genre = genre;
+            this.bewertung = bewertung;
+            this.vorstellungen = vorstellungen;
+        }
+
+        var plan9Film = new Film("Plan 9 aus dem Weltall", "Kult-Klassiker", 2, ["15 Uhr", "19 Uhr", "23 Uhr"]);
+
+        var jsonString = JSON.stringify(plan9Film);
+        alert(jsonString);
+
+        var jsonFilmObject = JSON.parse(jsonString);
+        alert("JSON-Film heißt " + jsonFilmObject.titel);
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
