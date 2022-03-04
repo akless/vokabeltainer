@@ -51,7 +51,7 @@ app_state_data.forEach( function ( obj, i, arr ) {
       <span class="ratings">(${Object.keys(obj.ratings).length})</span>
     </p>
     <p>Your Rating:</p>
-    <p>
+    <p id="mystars">
       ${ star_empty + star_empty + star_empty + star_empty + star_empty }
       <!--${ [ '', '', '', '', '' ].map( () => star_empty ).join( '' ) }-->
     </p>
