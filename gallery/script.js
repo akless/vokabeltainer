@@ -21,7 +21,7 @@ const app_state_data = [
   }
 ];
 
-app_state_data.forEach( console.log );
+//app_state_data.forEach( console.log );
 
 const star_empty = `
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-star" viewBox="0 0 16 16">
@@ -56,6 +56,27 @@ app_state_data.forEach( function ( obj, i, arr ) {
       <!--${ [ '', '', '', '', '' ].map( () => star_empty ).join( '' ) }-->
     </p>
   `;
+
+  // console.log(div);
+  // Click-event: onclick
+  console.log( div.querySelector( 'h2' ).innerText );
+  div.querySelectorAll( '#mystars svg' ).forEach( function ( svg, i, stars ) {
+    console.log( svg );
+    svg.addEventListener( "click", function () {
+      // Hier kommt, was wir machen, wenn man auf den Stern klickt.
+      const user = document.querySelector("#user").value;
+      const title = obj.title;
+      const star = i + 1;
+      console.log( user, title, star );
+      obj.ratings[ user ] = star;
+      console.log( app_state_data );
+
+      const ratings = Object.values( obj.ratings );
+      const sum = ratings.reduce( function(pv, cv) { return pv + cv; }, 0 );
+      obj.rating = sum / ratings.length;
+
+    } );
+  } );
 
   // render stars
   const stars = div.querySelector( '.stars' );

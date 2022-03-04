@@ -4,7 +4,7 @@ window.onload = function () {
     // var url = "http://localhost/verkaufszahlen.json";
     //var url = "http://localhost/~WebstormProjects/vokabeltainer/training_martin/uebungen5/verkaufszahlen.json";
     //var url = "http://127.0.0.1/Users/martin/WebstormProjects/vokabeltainer/training_martin/uebungen5/verkaufszahlen.json";
-    var url = "http://localhost/Users/martin/WebstormProjects/vokabeltrainer/Resources/verkaufszahlen.json";
+    var url = "./../../Resources/verkaufszahlen.json";
 
     var request = new XMLHttpRequest();
     request.open("GET", url);
