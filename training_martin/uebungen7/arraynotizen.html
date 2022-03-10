@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="den">
+<head>
+    <meta charset="UTF-8">
+    <title>Notizen</title>
+    <link rel="stylesheet" href="postnotizen.css">
+    <script src="arraynotizen.js"></script>
+</head>
+<body>
+    <form>
+        <label for="notiz_farbe">Farbe: </label>
+        <select id="notiz_farbe">
+            <option value="LightGoldenRodYellow">Gelb</option> <!-- #FAFAD2 -->
+            <option value="PaleGreen">Grün</option> <!-- #98FB98 -->
+            <option value="LightPink">Pink</option> <!-- #FFB6C1 -->
+            <option value="LightBlue">Blau</option> <!-- #ADD8E6 -->
+        </select>
+        <label for="notiz_text">Text:</label>
+        <input type="text" id="notiz_text">
+        <input type="button" id="button_hinzufuegen" value="Haftnotiz hinzufügen">
+        <input type="button" id="loesch_button" value="Alle Notizen löschen">
+    </form>
+
+    <ul id="haftnotizen"></ul>
+
+</body>
+</html>

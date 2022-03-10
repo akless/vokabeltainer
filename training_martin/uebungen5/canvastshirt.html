@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas - Zeichnen</title>
+    <style>
+        canvas {border: 1px solid black; }
+    </style>
+    <script src="canvastshirt.js"></script>
+</head>
+
+<body>
+    <h1>Canvas: T-Shirt</h1>
+    <canvas width="600" height="200" id="tshirtCanvas">
+        <p>Bitte aktualisieren Sie Ihren Browser, um Canvas: T-Shirt zu nutzen!</p>
+    </canvas>
+
+    <form>
+        <p>
+            <label for="hintergrundFarbe">Hintergrundfarbe:</label>
+            <select id="hintergrundFarbe">
+                <option value="white" selected="selected">Weiß</option>
+                <option value="black">Schwarz</option>
+            </select>
+        </p>
+        <p>
+            <label for="formen">Kreise oder Quadrate?</label>
+            <select id="formen">
+                <option value="keine" selected="selected">Keins von beiden</option>
+                <option value="kreise">Kreise</option>
+                <option value="quadrate">Quadrate</option>
+            </select>
+        </p>
+        <p>
+            <label for="textFarbe">Textfarbe:</label>
+            <select id="textFarbe">
+                <option value="black" selected="selected">Schwarz</option>
+                <option value="white">Weiß</option>
+            </select>
+        </p>
+        <p>
+            <label for="tweets">Tweet:</label>
+            <select id="tweets">
+            </select>
+        </p>
+        <p>
+            <input type="button" id="vorschauButton" value="Vorschau">
+        </p>
+
+    </form>
+    <script src="http://twitter.com/statuses/user_timeline/OReilly_Verlag.json?callback=aktualisiereTweets"></script>
+
+</body>
+</html>

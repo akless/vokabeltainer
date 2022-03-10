@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notizen</title>
+    <script>
+        localStorage.setItem("notiz_0", "Wäsche abholen");
+        localStorage.setItem("notiz_1", "Kabel-TV kündigen. Braucht kein Mensch.");
+        localStorage.setItem("martin", "Dies ist Martin's Test mit dem Stichwort 'martin'!");
+
+        var notiz = localStorage.getItem("notiz_0");
+        alert(notiz);
+        var notiz3 = localStorage.getItem("martin");
+        alert(notiz3);
+
+        localStorage.setItem("anzahl", 1);
+        var anzArtikel = parseInt(localStorage.getItem("anzahl"));
+        anzArtikel = anzArtikel +1;
+        localStorage.setItem("anzahl", anzArtikel);
+        alert(anzArtikel);
+
+        localStorage.setItem("preis", 9.99);
+        var preis = parseFloat(localStorage.getItem("preis"));
+        var summe = preis - 1.01;
+        alert(summe);
+
+        for (var i = 0; i < localStorage.length; i++) {
+            alert("localStorage.length: " + localStorage.length);
+            var schluessel = localStorage.key(i);
+            alert("Key: " + schluessel);
+            var wert = localStorage[schluessel];
+            alert(wert)
+        }
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

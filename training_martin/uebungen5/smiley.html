@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <title>Smiley</title>
+    <meta charset="utf-8" />
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        window.onload = zeichneSmiley;
+
+        function zeichneSmiley() {
+            var canvas = document.getElementById("smiley");
+            var kontext = canvas.getContext("2d");
+
+            // Gesicht
+            kontext.beginPath();
+            kontext.arc(300, 					// x  und
+                300, 					// y f�r den Mittelpunkt
+                200, 					// Bogen-Radius
+                0, 						// Startwinkel
+                gradInRadiant(360),	// Endinkel
+                true);					// gegen den Uhrzeigersinn
+            kontext.fillStyle = "#ffffcc";
+            kontext.fill();
+            kontext.stroke();
+
+            // Linkes Auge
+            kontext.beginPath();
+            kontext.arc(200, 250, 25, 0, gradInRadiant(360), true);
+            kontext.stroke();
+
+            // Rechtes Auge
+            kontext.beginPath();
+            kontext.arc(400, 250, 25, 0, gradInRadiant(360), true);
+            kontext.stroke();
+
+            // Nase
+            kontext.beginPath();
+            kontext.moveTo(300, 300);
+            kontext.lineTo(300, 350);
+            kontext.stroke();
+
+            // Startwinkel befindet sich rechts vom Mittelpunkt.
+            // Um also einen Halbkreis zu zeichnen , der nach oben offen ist,
+            // wie z. B. der l�chelnde Mund, m�ssen wir im Uhrzeigersinn zeichnen.
+            // Winkel ist die Gradzahl, die wir von den Enden des Halbkreises abziehen,
+            // damit der Mund realistischer aussieht.
+            //
+
+            kontext.beginPath();
+            kontext.arc(300, 350, 75, gradInRadiant(20), gradInRadiant(160), false);
+
+            // Sie k�nnten den Mund auf so zeichnen:
+            // var winkel = gradInRadiant(20);
+            // kontext.arc(300, 350, 75, winkel, Math.PI - winkel, false);
+
+            kontext.stroke();
+
+        }
+
+        function gradInRadiant(grad) {
+            radiant = (grad * Math.PI)/180;
+            return radiant;
+        }
+
+    </script>
+</head>
+<body>
+<canvas width="600" height="600" id="smiley">
+    <p>Sie brauchen Canvas!</p>
+    <p>F�r dieses Beispiel ist ein Browser erforderlich, der die
+        &lt;canvas&gt;-Funktion von <a href="http://www.w3.org/html/wg/html5/">HTML5</a>
+        unterst�tzt.</p>
+</canvas>
+</body>
+</html>

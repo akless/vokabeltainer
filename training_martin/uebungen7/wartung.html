@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+    <title>Wartung</title>
+    <meta charset="utf-8">
+    <script>
+        window.onload = function() {
+            var loeschButton = document.getElementById("loesch_button");
+            loeschButton.onclick = speicherLoeschen;
+        }
+
+        function speicherLoeschen() {
+            localStorage.clear();
+        }
+    </script>
+</head>
+<body>
+<form>
+    <input type="button" id="loesch_button" value="Speicher löschen">
+</form>
+</body>
+</html>

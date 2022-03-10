@@ -1,4 +1,4 @@
-// CSS
+// JS
 
 window.onload = function () {
     // var url = "http://localhost/verkaufszahlen.json";

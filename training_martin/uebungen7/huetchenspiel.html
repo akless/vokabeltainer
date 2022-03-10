@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+    <title>Hütchenspiel</title>
+    <meta charset="utf-8">
+    <script>
+        window.onload = function() {
+            huetchenSpiel();
+        }
+
+        function huetchenSpiel() {
+            localStorage.setItem("huetchen1", "erbse");
+            localStorage.setItem("huetchen2", "leer");
+            localStorage.setItem("huetchen3", "leer");
+            localStorage["huetchen1"] = "leer";
+            localStorage["huetchen2"] = "erbse";
+            localStorage["huetchen3"] = "leer";
+            var wert = localStorage.getItem("huetchen2");
+            localStorage.setItem("huetchen1", wert);
+            wert = localStorage.getItem("huetchen3");
+            localStorage["huetchen2"] = wert;
+            var schluessel = "huetchen2";
+            localStorage[schluessel] = "erbse";
+            schluessel = "huetchen1";
+            localStorage[schluessel] = "leer";
+            schluessel = "huetchen3";
+            localStorage[schluessel] = "leer";
+
+            for (var i = 0; i < localStorage.length; i++) {
+                var schluessel = localStorage.key(i);
+                var wert = localStorage.getItem(schluessel);
+                alert(schluessel + ": " + wert);
+            }
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
