@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <title>Quote</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<p id="zitat"></p>
+<script>
+    var worker = new Worker("zitat.js");
+    worker.onmessage = function(event) {
+        document.getElementById("zitat").innerHTML = event.data;
+    }
+    worker.onerror = function(fehler) {
+        document.getElementById("zitat").innerHTML = fehler.meldung;
+    }
+</script>
+</body>
+</html>

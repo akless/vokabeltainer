@@ -139,6 +139,7 @@ function gradInRadiant(grad) {
 
 function aktualisiereTweets(tweets) {
     var tweetAuswahl = document.getElementById("tweets");
+    console.log(tweets);
 
     // Alle Tweets in das Tweets-Men� einf�gen
     for (var i = 0; i < tweets.length; i++) {
