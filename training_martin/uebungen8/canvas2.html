@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas 2</title>
+
+    <script>
+        window.onload = function () {
+            const canvas = document.getElementById('canvas4');
+            const ctx = canvas.getContext('2d');
+            var grad = 36;
+
+            ctx.save();
+            ctx.translate(200,200);
+            ctx.fillStyle = "rgba(150, 50, 50, .5)";
+
+            for (var i=0; i < 360/grad; i++) {
+                ctx.fillRect(0,0,100,100)
+                ctx.rotate((winkelUmrechnen(grad)));
+            }
+            ctx.restore();
+
+        };
+
+        function winkelUmrechnen(winkel) {
+            var bogenmass = (Math.PI * winkel ) / 180
+            return bogenmass;
+        }
+
+    </script>
+
+</head>
+<body>
+    <canvas id="canvas4" width="400" height="400"></canvas>
+</body>
+</html>
