@@ -23,18 +23,6 @@ const app_state_data = [
 // app_state_data.forEach( console.log );
 
 
-
-
-const new_item = {
-  title: 'Mona Lisa',
-  item: 'img/item4.jpg',
-  rating: 0,
-  ratings: {}
-}
-
-
-
-
 refresh();
 
 document.querySelector("#user").addEventListener('change', refresh);
@@ -44,7 +32,8 @@ document.querySelector("#user").addEventListener('change', refresh);
 
 document.querySelector('button').addEventListener('click', function () {
   // Hier kommt, was passiert, wenn man den Knopf drückt!
-  addNewItem(new_item);
+  gotoFormPage();
+  //addNewItem(new_item);
 });
 
 
@@ -152,6 +141,88 @@ function addNewItem (item) {
 }
 
 
+
+function gotoFormPage() {
+
+  document.querySelector("#gallery").innerHTML = "";
+  const div = document.createElement( 'div' );
+  div.innerHTML = `
+  <h2>Please insert your data</h2>
+  <p>Titel: <input id="title_save" type="text" name="titel" value="Mona Lisa"></p>
+  <p>Bild: <input id="bild_save" type="text" name="img" value="img/item4.jpg"></p>
+  <button id="button_save" type="button">Save</button>
+  `;
+  const user = document.querySelector( "#user" ).value;
+
+  document.querySelector("#gallery").appendChild( div );
+
+  document.querySelector('#button_save').addEventListener('click', function () {
+    let new_item = {};
+    new_item.title = document.querySelector( "#title_save").value;
+    new_item.item = document.querySelector("#bild_save").value;
+    new_item.rating = 0;
+    new_item.ratings = {};
+
+    app_state_data.push(new_item);
+    document.querySelector("#gallery").innerHTML = "";
+    refresh();
+    //addNewItem(new_item);
+  });
+
+
+
+  /*
+  title: 'Mona Lisa',
+  item: 'img/item4.jpg',
+
+
+
+
+  app_state_data.forEach( function ( obj, i, arr ) {
+    const div = document.createElement( 'div' );
+    div.innerHTML = `
+      <h2>${ obj.title }</h2>
+      <img src="${ obj.item }">
+      <p>
+        <span class="stars"></span>
+        <span class="ratings">(${ Object.keys( obj.ratings ).length })</span>
+      </p>
+      <p>Your Rating:</p>
+      <p id="mystars"></p>
+    `;
+
+    const user = document.querySelector( "#user" ).value;
+    renderStars( obj.ratings[ user ], div.querySelector( '#mystars' ) );
+    // console.log(div);
+
+    // Click-event: onclick
+    console.log( div.querySelector( 'h2' ).innerText );
+    div.querySelectorAll( '#mystars svg' ).forEach( function ( svg, i, stars ) {
+      // console.log( svg );
+      // console.log(i + " <===============================================")
+      svg.addEventListener( "click", function () {
+        // Hier kommt, was wir machen, wenn man auf den Stern klickt.
+        const title = obj.title;
+        const star = i + 1;
+        console.log( user, title, star );
+        obj.ratings[ user ] = star;
+        console.log( app_state_data );
+
+        const rating_values = Object.values( obj.ratings );
+        const sum = rating_values.reduce( function(pv, cv) { return pv + cv; }, 0 );
+        obj.rating = sum / rating_values.length;
+        refresh();
+
+      } );
+    } );
+
+    renderStars( obj.rating, div.querySelector( '.stars' ) );
+
+    // add article to gallery
+    document.querySelector("#gallery").appendChild( div );
+  } );
+  */
+}
 
 
 
