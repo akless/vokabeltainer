@@ -22,9 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c6de406-2a1c-490e-a0cd-8c2d40f6fb22" name="Default Changelist" comment="Some new files... workers">
-      <change afterPath="$PROJECT_DIR$/gallery/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gallery/webcomponent.js" afterDir="false" />
+    <list default="true" id="2c6de406-2a1c-490e-a0cd-8c2d40f6fb22" name="Default Changelist" comment="Some new files... 25.3.">
+      <change afterPath="$PROJECT_DIR$/gallery/img/item3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gallery/img/item4.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gallery/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/gallery/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gallery/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/gallery/script.js" afterDir="false" />
@@ -71,6 +71,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/gallery/img" />
       <recent name="$PROJECT_DIR$/training_martin/uebungen5" />
       <recent name="$PROJECT_DIR$/Resources" />
       <recent name="$PROJECT_DIR$/training_martin" />
@@ -163,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647276761137</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Some new files... 25.3.">
+      <created>1648215379894</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1648215379894</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,7 +200,8 @@
     <MESSAGE value="Some new files..." />
     <MESSAGE value="Some new files... wichtig: arraynotizen.html und canvastshirt.html" />
     <MESSAGE value="Some new files... workers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some new files... workers" />
+    <MESSAGE value="Some new files... 25.3." />
+    <option name="LAST_COMMIT_MESSAGE" value="Some new files... 25.3." />
   </component>
   <component name="WindowStateProjectService">
     <state x="363" y="-1049" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1643376592553">
@@ -209,13 +218,14 @@
     <state x="408" y="-1072" key="SettingsEditor/-381.-1415.2560.1415/0.25.1792.1036@-381.-1415.2560.1415" timestamp="1643376647323" />
     <state x="408" y="-1072" key="SettingsEditor/-381.-1415.2560.1415/0.25.1792.1037@-381.-1415.2560.1415" timestamp="1643376442263" />
     <state x="408" y="-1072" key="SettingsEditor/-381.-1415.2560.1415/0.25.1792.1039@-381.-1415.2560.1415" timestamp="1643375891713" />
-    <state x="499" y="-990" key="Vcs.Push.Dialog.v2" timestamp="1647276777181">
-      <screen x="-381" y="-1415" width="2560" height="1354" />
+    <state x="499" y="-971" key="Vcs.Push.Dialog.v2" timestamp="1648215396111">
+      <screen x="-381" y="-1415" width="2560" height="1415" />
     </state>
     <state x="499" y="-990" key="Vcs.Push.Dialog.v2/-381.-1415.2560.1354/0.25.1792.1095@-381.-1415.2560.1354" timestamp="1647276777181" />
     <state x="499" y="-971" key="Vcs.Push.Dialog.v2/-381.-1415.2560.1415/0.25.1792.1037@-381.-1415.2560.1415" timestamp="1644250981020" />
     <state x="499" y="-971" key="Vcs.Push.Dialog.v2/-381.-1415.2560.1415/0.25.1792.1040@-381.-1415.2560.1415" timestamp="1643375698082" />
     <state x="499" y="-971" key="Vcs.Push.Dialog.v2/-381.-1415.2560.1415/0.25.1792.1043@-381.-1415.2560.1415" timestamp="1646296058724" />
+    <state x="499" y="-971" key="Vcs.Push.Dialog.v2/-381.-1415.2560.1415/0.25.1792.1045@-381.-1415.2560.1415" timestamp="1648215396111" />
     <state x="542" y="-953" key="git4idea.ui.GitStashDialog" timestamp="1646662960573">
       <screen x="-381" y="-1415" width="2560" height="1354" />
     </state>

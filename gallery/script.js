@@ -20,14 +20,34 @@ const app_state_data = [
     ratings: {}
   }
 ];
-
 // app_state_data.forEach( console.log );
+
+
+
+
+const new_item = {
+  title: 'Mona Lisa',
+  item: 'img/item4.jpg',
+  rating: 0,
+  ratings: {}
+}
+
+
 
 
 refresh();
 
 document.querySelector("#user").addEventListener('change', refresh);
 // oninput als Alternative zu change !
+
+
+
+document.querySelector('button').addEventListener('click', function () {
+  // Hier kommt, was passiert, wenn man den Knopf drückt!
+  addNewItem(new_item);
+});
+
+
 
 
 function refresh() {
@@ -126,6 +146,13 @@ function renderStars( rating = 0, elem ) {
 }
 
 
+function addNewItem (item) {
+  app_state_data.push(item);
+  refresh();
+}
+
+
+
 
 
 // Ideen für das nächste Mal:
@@ -136,6 +163,13 @@ function renderStars( rating = 0, elem ) {
 //    - Eingabemaske & neues Bild "einfügen"
 
 
+
+
+
+
+
+
+//  A L T ==================================================================== <<<<<<<<
 
 
 
