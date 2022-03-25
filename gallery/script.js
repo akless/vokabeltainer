@@ -21,20 +21,32 @@ const app_state_data = [
   }
 ];
 
-//app_state_data.forEach( console.log );
+// app_state_data.forEach( console.log );
+
 
 refresh();
 
 document.querySelector("#user").addEventListener('change', refresh);
-// oninput als Alternative...
+// oninput als Alternative zu change !
+
 
 function refresh() {
 
   document.querySelector("#gallery").innerHTML = "";
 
+  /*   ===>>> forEach: <<<===
+  forEach() ruft eine bereitgestellte callback-Funktion einmal für jedes Element in einem Array in aufsteigender
+  Reihenfolge auf. Sie wird nicht für Elemente aufgerufen, die gelöscht oder nicht initialisiert wurden
+  (d. h. Arrays mit leeren Elementen).
+
+  callback wird mit drei Argumenten aufgerufen:
+
+    1. Der Wert des Elements
+    2. Der Index des Elements
+    3. Das Array-Objekt, das durchlaufen wird    */
+
+
   app_state_data.forEach( function ( obj, i, arr ) {
-    // console.log( obj, i, arr );
-    // console.log( obj );
     const div = document.createElement( 'div' );
     div.innerHTML = `
       <h2>${ obj.title }</h2>
@@ -49,12 +61,13 @@ function refresh() {
 
     const user = document.querySelector( "#user" ).value;
     renderStars( obj.ratings[ user ], div.querySelector( '#mystars' ) );
-
     // console.log(div);
+
     // Click-event: onclick
     console.log( div.querySelector( 'h2' ).innerText );
     div.querySelectorAll( '#mystars svg' ).forEach( function ( svg, i, stars ) {
-      console.log( svg );
+      // console.log( svg );
+      // console.log(i + " <===============================================")
       svg.addEventListener( "click", function () {
         // Hier kommt, was wir machen, wenn man auf den Stern klickt.
         const title = obj.title;
@@ -78,6 +91,7 @@ function refresh() {
   } );
 
 }
+
 
 function renderStars( rating = 0, elem ) {
 
@@ -110,6 +124,16 @@ function renderStars( rating = 0, elem ) {
   }
 
 }
+
+
+
+
+// Ideen für das nächste Mal:
+// 1) Gallery ist erledigt, jetzt: WebComponente !  ==> w3c / André JS-WebComponente ! (Google: HTML erweitern)
+// 2) Ich --> HTML, CSS, JS, ...
+// 3) Wie kann der "Bürger" eine Gallery anlegen --> Eingabemaske
+//    - Bild hochladen, Titel schreiben, mit URL arbeiten, ...
+//    - Eingabemaske & neues Bild "einfügen"
 
 
 
